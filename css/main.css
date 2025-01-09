@@ -1,0 +1,250 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f3e6d8;
+	font-family: 'Outfit', serif;
+	font-size: 16px;
+	color: #5f574e;
+	counter-reset: x;
+}
+
+hr {
+	margin: 1.2rem 0 1.2rem 0;
+	border: none;
+	border-top: 1px solid #e4ded8;
+}
+
+h2 {
+	font-family: 'Young Serif', serif;
+	font-weight: 400;
+	color: #854632;
+}
+
+.recipe-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	width: 37rem;
+}
+
+.hero-img {
+	height: 180px;
+	width: 100%;
+	background-position: center;
+	background-size: cover;
+	background-image: url(../assets/images/image-omelette.jpeg);
+}
+
+.hero-text {
+	width: 31.5rem;
+
+	h1 {
+		font-family: 'Young Serif', serif;
+		font-weight: 200;
+		color: #302d2c;
+		margin-top: 4rem;
+		line-height: 3.2rem;
+	}
+
+	p {
+		padding: 1.5rem 0 4rem 0;
+		line-height: 2.2rem;
+	}
+}
+.wrapper {
+	width: 31.5rem;
+	height: 20rem;
+	background-color: #fff5fa;
+	border-radius: 12px;
+	list-style: none;
+
+	h2 {
+		position: relative;
+		top: 1.5rem;
+		left: 2rem;
+		color: #7b284f;
+		font-family: 'Outfit', serif;
+		font-weight: 600;
+		font-size: 2rem;
+	}
+
+	li {
+		position: absolute;
+		top: 3rem;
+		left: 4rem;
+		padding: 0.7rem;
+		width: 20rem;
+
+		span {
+			font-weight: bold;
+		}
+	}
+}
+
+.prep-list {
+	list-style: none;
+	padding-left: 0;
+}
+
+.prep-list li {
+	position: relative;
+	padding-left: 2rem;
+}
+
+.prep-list li::before {
+	content: '\2022';
+	color: #7b284f;
+	font-weight: 900;
+	position: absolute;
+	left: -1.3rem;
+	top: 0.5rem;
+}
+
+.prep-list li:first-child::before {
+	top: 1.5em;
+	transform: translateY(-50%);
+}
+
+.ingredients {
+	width: 31rem;
+	h2 {
+		padding: 3rem 0 2rem 0rem;
+	}
+
+	li {
+		padding: 0.8rem;
+		left: 2rem;
+		/* width: 30rem; */
+	}
+}
+
+.ingr-list {
+	list-style: none;
+	padding-left: 0;
+}
+
+.ingr-list li {
+	position: relative;
+	padding-left: 2rem;
+}
+
+.ingr-list li::before {
+	content: '\2022';
+	color: #854632;
+	font-weight: 900;
+	position: absolute;
+	left: -1rem;
+}
+
+.ingr-list li:last-child::before {
+	top: 2em;
+	transform: translateY(-50%);
+}
+
+.instructions {
+	width: 31rem;
+
+	h2 {
+		padding: 3rem 0 2rem 0rem;
+	}
+
+	li {
+		padding: 0.5rem;
+		left: 2rem;
+	}
+}
+
+.instr-list {
+	list-style: none;
+
+	span {
+		font-weight: bold;
+	}
+}
+
+.instr-list li {
+	position: relative;
+	padding: 0 2rem 1rem 2rem;
+}
+
+.instr-list li::before {
+	counter-increment: x;
+	content: '' counter(x) '.';
+	color: #854632;
+	font-weight: 600;
+	position: absolute;
+	left: -1rem;
+}
+
+.nutrition {
+	width: 31rem;
+	margin-top: 2.5rem;
+
+	.custom-table {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 4rem;
+	}
+
+	.item {
+		display: flex;
+		justify-content: space-between;
+		margin-left: 3rem;
+	}
+
+	.value {
+		font-weight: bold;
+		width: 14rem;
+		color: #854632;
+	}
+}
+
+@media (min-width: 1440px) {
+	.recipe-box{
+		width: 80rem;
+		margin-top: 10rem;
+		margin-bottom: 10rem;
+		border-radius: 4rem;
+	}
+	.hero-img{
+		margin-top: 2.5rem;
+		height: 35rem;
+		width: 75rem;
+		border-radius: 2rem;
+	}
+
+	.hero-text{
+		width: 75rem;
+	}
+
+	.wrapper{
+		width: 75rem;
+	}
+	.ingredients{
+		width: 75rem;
+	}
+	.instructions{
+		width: 75rem;
+	}
+	.nutrition{
+		width: 75rem;
+
+		.value{
+			width: 41rem;
+		}
+	}
+	
+}
